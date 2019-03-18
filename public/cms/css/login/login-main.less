@@ -1,0 +1,120 @@
+.login-view{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.login-wrapper {
+  height:360px;
+  .login-box {
+    @w: 320px;
+    .size(@w, 100%);
+    .login-title {
+      text-align: center;
+      .company-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          .size(22px, 22px);
+        }
+        span {
+          margin-left: 8px;
+          font-size: 18px;
+          color: @blueColor;
+          letter-spacing: 3px;
+        }
+      }
+      .systme-name {
+        margin: 30px 0 40px 0;
+        font-size: 14px;
+        span {
+            color: @blueColor;
+        }
+      }
+    }
+    .login-form {
+      margin-top: 20px;
+      @inputH: 28px;
+      .form-group {
+        margin: 35px 0;
+        position: relative;
+        &.form-input {
+          input {
+            width:@w - 6px;
+          }
+        }
+        &.form-btn {
+          position: relative;
+          input {
+            width: @w;
+          }
+          .login-modal {
+            .btn-loading-modal(@inputH);
+          }
+        }
+        &.form-forget {
+          width: @w;
+          font-size: 12px;
+          color: RGB(119, 119, 119);
+          position: relative;
+          text-align: center;
+          line-height: 35px;
+          span {
+            position: absolute;
+            top:0px;
+            right:0;
+            opacity: 0.8;
+            cursor: pointer;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+          .common-error-tips{
+            @w:245px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            right: -170px;
+            display: none;
+            >div{
+              margin-left: 30px;
+              @color:RGB(25, 26, 25);
+              color: #fff;
+              font-size: 12px;
+              text-align: center;
+              .size(auto,32px);
+              min-width: 120px;
+              line-height: 32px;
+              background-color: @color;
+              .radius(2px);
+              position: relative;
+              padding: 0px 6px;
+              &::before{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: -18px;
+                top: 4px;
+                border-top:12px solid transparent;
+                border-bottom:12px solid transparent;
+                border-right: 22px solid @color;
+              }
+            }
+        }
+          .error-tips{
+            display: none;
+          }
+      }
+    }
+  }
+}
+

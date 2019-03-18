@@ -1,0 +1,30 @@
+<!--地址管理-->
+<template name="address">
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <input name="name" auto-focus placeholder="姓名"/>
+    </view>
+    <view class="section">
+      <input type="number" name="mobile" placeholder="手机号码"/>
+    </view>
+    <view class="section">
+      <text>省份</text>
+      <picker bindchange="bindChangeProvince" value="{{index}}" range="{{areaData.p}}">
+        <view>
+          <text>123{{province}}</text>
+          <image class="counts-icon" src="../../../imgs/icon/arrow-down.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <input name="city" placeholder="城市"/>
+    </view>
+    <view class="section">
+      <input name="town" placeholder="区县"/>
+    </view>
+    <view class="section">
+      <input name="detail" placeholder="详细地址、如街道、楼牌号等"/>
+    </view>
+    <button  class="submit-btn" formType="submit">保存</button>
+  </form>
+</template>

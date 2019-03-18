@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/theme/theme",
+    "pages/product/product",
+    "pages/order/order",
+    "pages/pay-result/pay-result"
+  ],
+  "window":{
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "#FFFFFF",
+    "navigationBarBackgroundColor": "#d13525",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "list":[{
+        "pagePath":"pages/home/home",
+        "iconPath":"imgs/toolbar/home.png",
+        "selectedIconPath":"imgs/toolbar/home@selected.png",
+        "text":"主页"
+      },{
+        "pagePath":"pages/category/category",
+        "iconPath":"imgs/toolbar/category.png",
+        "selectedIconPath":"imgs/toolbar/category@selected.png",
+        "text":"分类"
+      },{
+        "pagePath":"pages/cart/cart",
+        "iconPath":"imgs/toolbar/cart.png",
+        "selectedIconPath":"imgs/toolbar/cart@selected.png",
+        "text":"购物车"
+      },{
+        "pagePath":"pages/my/my",
+        "iconPath":"imgs/toolbar/my.png",
+        "selectedIconPath":"imgs/toolbar/my@selected.png",
+        "text":"我的"
+      }],
+      "backgroundColor": "#F5F5F5",
+      "selectedColor": "#AB956D",
+      "color": "#989898",
+      "borderStyle": "white",
+      "position":"bottom"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug":true
+}

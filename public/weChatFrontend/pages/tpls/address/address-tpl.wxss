@@ -1,0 +1,16 @@
+form{
+    display: block;
+    margin-top: 20rpx;
+}
+.section{
+    border-bottom:1rpx solid #E9E9E9;
+    margin-left:30rpx;
+}
+.section input{
+    font-size: 28rpx;
+    color:#7C7C7C;
+    padding: 20rpx 0;
+}
+.submit-btn{
+    margin: 30rpx;
+}

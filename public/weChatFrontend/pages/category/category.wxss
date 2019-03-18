@@ -1,0 +1,53 @@
+@import "../tpls/category/category-tpl.wxss";
+
+.category-container{
+    /*min-height: 100vh;*/
+}
+.category-box{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.left-box{
+    flex: 0 0 150rpx;
+    border-right:1rpx solid #D8D8D8;
+}
+.menu-item{
+    height: 50rpx;
+    padding: 20rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:28rpx;
+    border-left: 6rpx solid #fff;
+}
+.menu-item.selected{
+    color: #AB956D;
+    border-left-color:#AB956D;
+}
+
+.right-box{
+    flex: 1;
+    transition: all 500ms ease-in-out;
+}
+.tanslate0{
+    transform:translate(0,0);
+}
+.tanslate1{
+    transform:translate(0,-100vh);
+}
+.tanslate2{
+    transform:translate(0,-200vh);
+}
+.tanslate3{
+    transform:translate(0,-300vh);
+}
+.tanslate4{
+    transform:translate(0,-400vh);
+}
+.tanslate5{
+    transform:translate(0,-500vh);
+}
+.foods-type-box{
+    height: 100vh;
+}

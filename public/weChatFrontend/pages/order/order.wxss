@@ -1,0 +1,142 @@
+@import "../tpls/base.wxss";
+
+.order-container{
+    background-color: #F4F4F4;
+    overflow-x: hidden;
+    font-size: 28rpx;
+}
+.order-container>view{
+    background-color: #fff;
+}
+.order-main{
+    padding-bottom:92rpx;
+}
+.order-address-info,.order-basic-info{
+    padding:20rpx 40rpx;
+}
+
+.order-basic-info{
+    border-bottom: 1rpx solid #E9E9E9;
+    display: flex;
+}
+
+.order-time-no{
+    flex: 1;
+}
+.order-status{
+    display: flex;
+    flex-basis: 110rpx;
+    align-items: center;
+    justify-content: flex-end;
+}
+.order-time-no view:first-child{
+   margin-bottom:15rpx ;
+}
+.order-time-no view .key{
+    color: #999999;
+}.order-time-no view .val{
+    margin-left: 10rpx;
+    color: #333;
+}
+.order-address-info{
+    margin-bottom: 20rpx;
+}
+
+.contact-box{
+    display: flex;
+}
+.contact-box>view:first-child{
+    flex: 1;
+}
+.contact-icon{
+    flex-basis: 110rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.contact-icon image{
+    transform: rotate(270deg);
+    height: 48rpx;
+    width: 48rpx;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25rpx;
+}
+.contact view{
+    display: flex;
+    align-items: center;
+}
+.contact .mobile-box{
+    flex-basis: 200rpx;
+}
+.contact image{
+    height:32rpx;
+    width:32rpx;
+    margin-right: 10rpx;
+}
+.contact .val{
+    color:#333;
+}
+.contact-box .detail{
+    color:#999999;
+}
+
+
+
+.product-item{
+    display: flex;
+    justify-content: space-around;
+    height:180rpx;
+    color: #6D6D6D;
+    border-bottom: 1rpx solid #E9E9E9;
+    padding:20rpx;
+}
+.product-item .item-left{
+    flex-basis: 180rpx;
+    height: 100%;
+    background-color: #F5F6F5;
+    border-radius: 4rpx;
+}
+.product-item .item-left image{
+    height: 100%;
+    width: 100%;
+}
+.product-item .item-middle{
+    flex: 1;
+    margin-left: 20rpx;
+}
+.product-item .item-middle view{
+    margin: 15rpx 0;
+}
+.product-item .item-right{
+    flex-basis: 80rpx;
+    text-align: center;
+}
+
+.order-accounts{
+    background-color: #fff;
+}
+.order-accounts>view{
+    display: flex;
+    align-items: center;
+}
+.total-account{
+    flex: 1;
+    color:#93312E;
+    padding-left: 20rpx;
+}
+.pay{
+    flex-basis: 240rpx;
+    background-color: #AB956D;
+    color: #fff;
+    justify-content: center;
+}
+.pay:active{
+    background: #84704d;
+}
+.pay.disabled{
+    background: rgba(171,149,109,0.6);
+    pointer-events: auto;
+}

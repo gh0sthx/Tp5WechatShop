@@ -1,0 +1,76 @@
+<!--订单详情-->
+<view class="container order-container">
+  <!--订单编号和下单时间，如果是旧订单就显示-->
+  <view class="order-basic-info" wx:if="{{basicInfo}}">
+    <view class="order-time-no">
+      <view>
+        <text class="key">下单时间:</text>
+        <text class="val">{{basicInfo.orderTime}}</text>
+      </view>
+      <view>
+        <text class="key">订单编号:</text>
+        <text class="order-no-txt val">{{basicInfo.orderNo}}</text>
+      </view>
+    </view>
+    <view class="order-status">
+      <text class="order-status-txt unpay" wx:if="{{orderStatus==1}}">待付款</text>
+      <text class="order-status-txt payed" wx:if="{{orderStatus==2}}">已付款</text>
+      <text class="order-status-txt done" wx:if="{{orderStatus==3}}">已发货</text>
+    </view>
+  </view>
+
+  <!--地址-->
+  <view class="order-address-info {{orderStatus!=0?'disabled':''}}" ontap="editAddress">
+    <block wx:if="{{addressInfo}}">
+      <view class="contact-box">
+        <view>
+          <view class="contact">
+              <view>
+                <image src="../../imgs/icon/user.png"></image>
+                <text class="val">{{addressInfo.name}}</text>
+              </view>
+              <view class="mobile-box">
+                <image src="../../imgs/icon/mobile.png"></image>
+                <text  class="val">{{addressInfo.mobile}}</text>
+              </view>
+          </view>
+          <view class="detail">{{addressInfo.totalDetail}}</view>
+        </view>
+        <view class="contact-icon" wx:if="{{orderStatus==0}}">
+            <image src="../../imgs/icon/arrow@right.png"></image>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="add-new-address">
+        <text class="icon">+</text>
+        <text>添加地址</text></view>
+    </block>
+  </view>
+
+  <!--列表-->
+  <view class="order-main">
+    <block wx:for="{{productsArr}}">
+      <view class="product-item">
+        <view class="item-left">
+          <image src="{{item.main_img_url}}"></image>
+        </view>
+        <view class="item-middle">
+          <view>{{item.name}}</view>
+          <view>￥{{item.price}}</view>
+        </view>
+        <view class="item-right">
+          ×{{item.counts}}
+        </view>
+      </view>
+    </block>
+    </view>
+
+  <!--结算-->
+  <view class="footer-account-box order-accounts">
+    <view class="total-account">
+      付款合计：￥{{account}}
+    </view>
+    <view wx:if="{{orderStatus<=1}}" class="pay {{!addressInfo?'disabled':''}}" ontap="pay">去付款</view>
+  </view>
+</view>

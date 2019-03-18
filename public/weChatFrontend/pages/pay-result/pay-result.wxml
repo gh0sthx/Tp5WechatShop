@@ -1,0 +1,15 @@
+<!--地址-->
+<view class="container pay-result-container">
+  <view class="pay-result">
+    <block wx:if="{{payResult=='true'}}">
+     <image src="../../imgs/icon/pay@success.png"></image>
+     <view>支付成功</view>
+     <button type="primary" bindtap="viewOrder"> 查看订单 </button>
+    </block>
+   <block wx:else>
+    <image src="../../imgs/icon/pay@error.png"></image>
+    <view>支付失败</view>
+    <button type="default" bindtap="viewOrder"> 查看订单 </button>
+   </block>
+  </view>
+</view>
